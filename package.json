@@ -1,0 +1,40 @@
+{
+  "name": "secrets-guardian",
+  "version": "0.1.0",
+  "description": "Scan a git working tree (or just staged files, for a pre-commit hook) for leaked API keys and credentials before they hit history.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "secrets-guardian": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.test.json && node --test .test-build/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "security",
+    "secrets",
+    "api-keys",
+    "credentials",
+    "pre-commit",
+    "git-hook",
+    "cli",
+    "ci"
+  ],
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.6.0"
+  }
+}
