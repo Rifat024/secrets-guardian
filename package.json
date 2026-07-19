@@ -1,6 +1,6 @@
 {
   "name": "secrets-guardian",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scan a git working tree (or just staged files, for a pre-commit hook) for leaked API keys and credentials before they hit history.",
   "license": "MIT",
   "main": "dist/index.js",
